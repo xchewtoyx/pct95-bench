@@ -1,5 +1,6 @@
-/* from random import randint */
-
+/* Copyright (c) 2012 Russell Heilling
+ * See LICENSE for details
+ */
 #include "Python.h"
 
 /******************************************************
@@ -65,7 +66,6 @@ def qselect_range(tosort, start, end, target):
     return start
 
 */
-
 Py_ssize_t
 qselect_range(PyListObject *list, Py_ssize_t start, Py_ssize_t end, 
 	      Py_ssize_t target)

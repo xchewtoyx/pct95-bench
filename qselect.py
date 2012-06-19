@@ -1,3 +1,5 @@
+# Copyright (c) 2012 Russell Heilling
+# See LICENSE for details
 from random import randint
 
 def partition(a, start, end, pivot_index):

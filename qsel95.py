@@ -1,3 +1,5 @@
+# Copyright (c) 2012 Russell Heilling
+# See LICENSE for details
 from _qselect import qselect
 
 def percentile(tosort, percentile=95):

@@ -1,4 +1,6 @@
 #!/usr/bin/env python
+# Copyright (c) 2012 Russell Heilling
+# See LICENSE for details
 import heap95
 import list95
 import scipy95
@@ -16,10 +18,10 @@ METHODS = {
     'qselect_py': qselect.percentile,
 }
 
-def time_reps(pct_func):
+def time_reps(pct_func, input_list):
     elapsed = 0
     for repeat in range(1000):
-        input_list = [random.random() for r in range(8000)]
+        random.shuffle(input_list)
         start = time.time()
         value = pct_func(input_list)
         elapsed += time.time() - start
@@ -27,8 +29,9 @@ def time_reps(pct_func):
     
 def main():
     times = {}
+    input_list = [random.random() for r in range(8000)]
     for name, method in sorted(METHODS.items()):
-        times[name] = time_reps(method)
+        times[name] = time_reps(method, input_list)
         print name, times[name]
 
 if __name__ == "__main__":

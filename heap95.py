@@ -1,3 +1,5 @@
+# Copyright (c) 2012 Russell Heilling
+# See LICENSE for details
 import heapq
 
 def percentile_sliced(tosort, percentile=95):
