@@ -5,3 +5,5 @@ To compile the C extension _gselect.c use the following:
 
 gcc -c -fPIC -O3 -I/usr/share/include -o _gselect.o _gselect.c
 gcc -shared _gselect.o _gselect.so
+
+Russell Heilling <russell@heilling.net>
